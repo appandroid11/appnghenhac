@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/slide1"
+        android:id="@+id/nen"
+        />
+<com.google.android.material.appbar.AppBarLayout
+    android:visibility="invisible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:id="@+id/appbarlayout"
+    >
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabTextAppearance="@style/Customer"
+        android:background="@color/blue_"
+        app:tabGravity="fill"
+        android:id="@+id/tabs"
+        app:tabMode="fixed"
+        app:tabInlineLabel="true"
+        app:tabTextColor="@color/white"/>
+<androidx.viewpager.widget.ViewPager
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/viewPage"
+     android:layout_below="@id/appbarlayout"
+    />
+
+
+</com.google.android.material.appbar.AppBarLayout>
+
+</RelativeLayout>

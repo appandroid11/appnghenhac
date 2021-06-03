@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="@drawable/search"
+    >
+    <SearchView
+        android:id="@+id/search"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+
+
+        />
+    <Button
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/search"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/voice"
+        android:textColor="@color/blue_"
+        android:outlineProvider="none"
+        android:background="#00000000"
+        android:id="@+id/speech"
+        android:layout_centerInParent="true"
+
+        android:backgroundTint="@color/white"
+
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60dp"
+    android:scrollbars="none"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerView"
+            tools:listitem="@layout/list_item"
+            />
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
+
+<LinearLayout
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/musiclayout"
+    android:visibility="invisible"
+
+    >
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text=""
+   android:outlineSpotShadowColor="@color/white"
+    android:outlineAmbientShadowColor="@color/white"
+    android:backgroundTint="@color/white"
+    android:id="@+id/hidden"
+   android:outlineProvider="none"
+    android:textSize="48dp"
+   android:textColor="@color/blue_"
+    />
+
+
+   <ImageView
+       android:layout_height="300dp"
+       android:layout_width="300dp"
+       android:layout_marginLeft="-60dp"
+       android:layout_marginTop="70dp"
+       android:id="@+id/anhnen1"
+       android:background="@drawable/anhnen"
+       />
+
+
+    <com.gauravk.audiovisualizer.visualizer.BarVisualizer
+        android:id="@+id/barmusic"
+
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="-340dp"
+        app:avColor="@color/av_red"
+        app:avDensity="0.5"
+        app:avSpeed="normal"
+        app:avType="outline"
+        app:avWidth="4dp" />
+
+</LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/jcplay"
+        android:background="@drawable/search"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+    >
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/title"
+            android:textColor="@color/black"
+            android:text="Song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            android:id="@+id/seekBart"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:id="@+id/progress"
+                android:layout_marginLeft="20dp"
+
+                />
+            <SeekBar
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar"
+
+
+                />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:id="@+id/dura"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+android:layout_marginBottom="-30dp"
+            android:id="@+id/jc"
+
+            app:layout_constraintTop_toBottomOf="@+id/seekBart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            >
+            <Button
+
+                android:outlineSpotShadowColor="@color/white"
+                android:outlineAmbientShadowColor="@color/white"
+                android:backgroundTint="@color/white"
+                 android:text="@string/pre"
+                android:outlineProvider="none"
+                android:textColor="@color/blue_"
+
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/preBtn"
+                ></Button>
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/download"
+
+                android:text=""
+                android:outlineSpotShadowColor="@color/white"
+                android:outlineAmbientShadowColor="@color/white"
+                android:backgroundTint="@color/white"
+                android:outlineProvider="none"
+                android:textColor="@color/blue_"
+                />
+            <Button
+                android:outlineSpotShadowColor="@color/white"
+                android:outlineAmbientShadowColor="@color/white"
+                android:backgroundTint="@color/white"
+                android:text="@string/play"
+                android:textColor="@color/blue_"
+                android:outlineProvider="none"
+
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/playBtn"
+                ></Button>
+            <Button
+                android:outlineSpotShadowColor="@color/white"
+                android:outlineAmbientShadowColor="@color/white"
+                android:backgroundTint="@color/white"
+                android:text="\uF021"
+                android:textColor="@color/blue_"
+                android:outlineProvider="none"
+
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/loopBtn"
+                ></Button>
+
+            <Button
+
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:outlineSpotShadowColor="@color/white"
+                android:outlineAmbientShadowColor="@color/white"
+                android:backgroundTint="@color/white"
+                android:text="@string/next"
+                android:textColor="@color/blue_"
+                android:outlineProvider="none"
+                android:id="@+id/nextBtn"
+                ></Button>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

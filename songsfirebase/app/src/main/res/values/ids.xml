@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="barmusic" type="id" />
+    <item name="volumeBar" type="id" />
+    <item name="playBtn" type="id" />
+    <item name="remainingTimeLabel" type="id" />
+    <item name="elapsedTimeLabel" type="id" />
+    <item name="positionBar" type="id" />
+    <item name="anhnen" type="id" />
+</resources>

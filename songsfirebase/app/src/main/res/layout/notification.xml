@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue_"
+    >
+    <ImageView
+        android:src="@drawable/ic_baseline_music_note_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+      android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/titlenoti"
+        android:textColor="@color/black"
+        android:text="Song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+android:layout_centerHorizontal="true"
+
+        >
+
+        <Button
+
+            android:id="@+id/preBtnnoti"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+        android:textAlignment="center"
+            android:padding="20dp"
+          android:drawableLeft="@drawable/prem"
+            android:backgroundTint="#0000"
+
+
+            android:outlineProvider="none"
+
+
+            ></Button>
+
+        <Button
+            android:textAlignment="center"
+            android:padding="20dp"
+            android:backgroundTint="#0000"
+
+
+            android:drawableLeft="@drawable/playm"
+            android:layout_width="wrap_content"
+            android:outlineProvider="none"
+            android:layout_height="wrap_content"
+            android:id="@+id/playBtnnoti"
+            ></Button>
+
+
+        <Button
+            android:backgroundTint="#0000"
+            android:layout_width="wrap_content"
+          android:outlineProvider="none"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/nextm"
+            android:textAlignment="center"
+            android:padding="20dp"
+
+            android:id="@+id/nextBtnnoti"
+            >
+
+        </Button>
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+
+
+   </LinearLayout>
